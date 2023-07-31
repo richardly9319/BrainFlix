@@ -1,0 +1,58 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+.video {
+
+    &__title {
+        border-bottom: 1px $Mercury solid;
+
+        @include tablet {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__info {
+        display: flex;
+        border-bottom: 1px $Mercury solid;
+
+        &-channel-date {
+            margin-right: 30%;
+
+            @include tablet {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        
+
+        &-likes-views {
+            @include tablet {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &-views {
+            display: flex;
+            margin: 1rem;
+        }
+
+        &-likes {
+            display: flex;
+        }
+
+    }
+
+    &__channel {
+        @include tablet {
+            margin: 1rem;
+            margin-left: 0;
+        }
+    }
+
+
+
+}

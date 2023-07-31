@@ -1,0 +1,82 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+input {
+    background: url(../../assets/Icons/search.svg);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 5px;
+
+    @include tablet {
+        width: 30%;
+    }
+
+    &::placeholder {
+        padding-left: 2.5rem;
+        font-weight: 700;
+    }
+}
+
+.navbar {
+    display: block;
+    text-align: center;
+    
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        margin: 24px;
+    }
+
+    &__logo {
+        width: 120px;
+        height: 25px;
+        margin: auto;
+    }
+
+    &__searchBar-and-Img-and-Button1 {
+        display: flex;
+        width: 100%;
+        margin-top: 1rem;
+
+        @include tablet {
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 2rem;
+            
+        }
+    }
+
+    &__userImage {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: 1rem;
+        object-fit: cover;
+    }
+
+    
+
+    &__button1 {
+        display: none;  
+        
+        @include tablet {
+            display: flex;
+            // align-self: center;
+            margin: 1rem;
+        }
+        
+    }
+
+    &__button2 {
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    
+}
+

@@ -1,0 +1,19 @@
+@use '../../partials/variables' as *;
+
+.selected-video {
+    
+    position: relative;
+    width: 100%;
+    margin: 1rem 0rem;;
+
+  
+    &__player {
+        position: absolute;
+        width: 70%;
+        background-color: $BrainFlix-Black;
+        left: 30px;
+        bottom: 30px;
+       
+    }
+    
+}

@@ -1,0 +1,19 @@
+@use '../../partials/variables' as *;
+
+.Comment {
+    display: flex;
+    border-bottom: $Mercury solid 1px;
+
+    &__image {
+        min-width: 50px;
+        max-height: 50px;
+        background-color: $Mercury;
+        border-radius: 50%;
+        margin: 1rem;
+    }
+
+    &__name-date {
+        display: flex;
+        justify-content: space-between;
+    }
+}

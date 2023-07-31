@@ -1,0 +1,41 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+.button {
+    background-color: $BrainFlix-Blue;
+    display: flex;
+    position: relative;
+    height: 2.5rem;
+    margin-top: 16px;
+    border-radius: 5px;
+  
+    @include tablet {
+        width: 11rem;
+    }
+  
+    &-text {
+      color: white;
+      padding-right: 2rem;
+      margin: auto;
+    }
+
+    &1 {
+
+        display: none;
+
+        @include tablet {
+            display: flex;
+        }
+        
+    }
+
+    &2 {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &3 {
+        display: flex;
+    }
+  }

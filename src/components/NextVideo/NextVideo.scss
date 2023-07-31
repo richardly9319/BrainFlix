@@ -1,0 +1,27 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+.NextVideo {
+    display: flex;
+    // justify-content: space-between;
+
+    @include tablet {
+        width: 30rem;
+    }
+
+    &__image {
+        width: 25%;
+        max-height: 5.5rem;
+        border-radius: 7px;
+
+        @include tablet {
+            width: 50%;
+            max-height: 7rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__title-channel {
+        margin: 0rem 1rem;
+    }
+}

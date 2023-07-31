@@ -1,0 +1,59 @@
+@use './partials/fonts' as *;
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
+
+.App {
+  // text-align: center;
+  font-family: 'Avenir Next';
+  margin: 16px;
+  box-sizing: border-box;
+  color: $BrainFlix-Black;
+
+  @include tablet {
+    margin: 24px;
+  }
+}
+
+h1 {
+
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+
+  @include tablet {
+    font-size: 33px;
+    line-height: 44px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+h4 {
+  color: $Mercury;
+}
+
+p {
+  font-size: 13px;
+  line-height: 18px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+

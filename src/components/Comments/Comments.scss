@@ -1,0 +1,74 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+.comments {
+    &__header {
+        margin: 2.5rem 0rem;
+    }
+}
+
+.user-input {
+
+    display: flex;
+    padding-bottom: 1rem;
+    border-bottom: 1px $Mercury solid;
+
+    &__content {
+        width: 80%;
+        
+    }
+
+    
+
+
+    &__image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0rem 1rem;
+        object-fit: cover;
+    }
+
+    &__input {
+        background-image: none;
+        min-height: 10rem;
+        width: 80%;
+        margin-top: 0.5rem;
+        // position:
+
+        @include tablet {
+            min-height: 2rem;
+            margin-right: 1rem;
+    
+        }
+
+        &::placeholder {
+            position: absolute;
+            left: 0px;
+            top: 1rem;
+
+            
+        }
+
+        &:active {
+            border: $BrainFlix-Blue 2px solid;
+            
+            &::placeholder {
+                display: none;
+            }
+        }
+
+        &:invalid {
+            border: red 1px solid;
+        }
+        
+    }
+
+    &__input-and-button {
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    
+}
