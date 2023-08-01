@@ -1,4 +1,6 @@
+import './NextVideos.scss';
 import NextVideo from "../NextVideo/NextVideo";
+
 
 function NextVideos( { videoDetails, selectedVideo, setSelectedVideo} ) {
 
