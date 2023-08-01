@@ -37,7 +37,11 @@
 
         &-views {
             display: flex;
-            margin: 1rem;
+
+            @include tablet {
+                margin: 1rem;
+            }
+            
         }
 
         &-likes {

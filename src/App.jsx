@@ -16,8 +16,10 @@ function App() {
       <Navbar />
       <SelectedVideo selectedVideo={selectedVideo} />
       <VideoDesc />
+      <div className="Comments-NextVideos-Container">
       <Comments videoDetails={VideoDetails} selectedVideo={selectedVideo} />
       <NextVideos videoDetails={VideoDetails} selectedVideo={selectedVideo} setSelectedVideo={setSelectedVideo}/>
+      </div>
     </div>
   );
 }
