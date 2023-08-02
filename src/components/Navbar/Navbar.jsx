@@ -3,13 +3,16 @@ import './Navbar.scss';
 import userImage from '../../assets/Images/Mohan-muruge.jpg';
 import uploadIcon from '../../assets/Icons/upload.svg'
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
         <div className="navbar">
+            <Link to="/">
             <img className="navbar__logo" src={logo} alt="logo" />
+            </Link>
             <div className="navbar__searchBar-and-Img-and-Button1">
-                <input type="text" placeholder="Search"/>
+                <input className="navbar__searchBar" type="text" placeholder="Search"/>
                 <Button visibility="1" icon={uploadIcon} text="Upload" />
                 <img className="navbar__userImage" src={userImage} alt="user" />
             </div>
