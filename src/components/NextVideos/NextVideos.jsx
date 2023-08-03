@@ -6,25 +6,25 @@ function NextVideos( { videoDetails, selectedVideo, setSelectedVideo} ) {
 
       
 
-      const findVideoIndex = (videos, videoID) => {
+      // const findVideoIndex = (videos, videoID) => {
         
-        return (
-        videos.findIndex((video) => {
+      //   return (
+      //   videos?.findIndex((video) => {
          
-          return video.id == videoID
+      //     return video.id == videoID
           
-        })
-        )
+      //   })
+      //   )
 
 
-      }
+      // }
 
 
 
       console.log("selectedVideo: ", videoDetails[selectedVideo]?.id);
 
-      let x = findVideoIndex(videoDetails, videoDetails[selectedVideo]?.id);
-      console.log('findVideo: ', x);
+      // let x = findVideoIndex(videoDetails, videoDetails[selectedVideo]?.id);
+      // console.log('findVideo: ', x);
 
 
         let selectedVideoID = videoDetails[selectedVideo]?.id;
@@ -35,7 +35,7 @@ function NextVideos( { videoDetails, selectedVideo, setSelectedVideo} ) {
             if (video?.id !== selectedVideoID) {
                 return video }}).map((video, index) => {
                     return (
-                        <NextVideo video={video} index={index} setSelectedVideo={setSelectedVideo} findVideoIndex={findVideoIndex} videoDetails={videoDetails}/>
+                        <NextVideo video={video} index={index} setSelectedVideo={setSelectedVideo} videoDetails={videoDetails}/>
                     )
                 })
                 

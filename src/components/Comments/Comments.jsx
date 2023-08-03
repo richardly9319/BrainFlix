@@ -8,7 +8,7 @@ function Comments({ videoDetails, selectedVideo }) {
     let comment_count = 3;
     
 
-    let selectedVideoDetails = videoDetails[0];
+    let selectedVideoDetails = videoDetails[selectedVideo];
 
     console.log("selectedVideoDetails: ", selectedVideoDetails);
 

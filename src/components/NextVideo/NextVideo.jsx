@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './NextVideo.scss';
 // import { Link } from 'react-router-dom';
 
-function NextVideo( { video, index, setSelectedVideo, findVideoIndex, videoDetails} ) {
+function NextVideo( { video, index, setSelectedVideo, videoDetails} ) {
 
     console.log("video in NextVideo: ", video);
   

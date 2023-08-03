@@ -21,36 +21,41 @@ function HomePage() {
 
     const { videoID } = useParams();
 
+    console.log("vidID");
     useEffect(() => {
       axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${api_key}`)
       .then((response) => {
+        console.log("VideoDetails!!!: ", response.data);
         setVideoDetails(response.data);
       }
       ).catch((err) => console.error(err));
     }, [])
 
     useEffect(() => {
+        console.log("useeffect");
         if (videoID) {
           console.log("videoID: ", videoID);
-        // axios.get(`https://project-2-api.herokuapp.com/videos/${videoID}?api_key=${api_key}`)
-        // .then((response) => {
-          // console.log("response.data: ", response.data);
-          // console.log("videoID: ", videoID);
-          // console.log("VideoDetails!!: ", VideoDetails);
-          setSelectedVideo(VideoDetails.findIndex((video) => {
+        axios.get(`https://project-2-api.herokuapp.com/videos/${videoID}?api_key=${api_key}`)
+        .then((response) => {
+          console.log("response.data: ", response.data);
+          console.log("videoID: ", videoID);
+          console.log("VideoDetails!!: ", VideoDetails);  
+          setSelectedVideo(VideoDetails?.findIndex((video) => {
             
             return video.id == videoID;
           }))
-        // }).catch((err) => console.error(err));
+        }).catch((err) => console.error(err));
       } 
-      // else {
-      //     axios.get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=${api_key}`)
-      //     .then((response) => {
-      //       setVideoDetails(response.data);
-      //     }).catch((err) => console.error(err));
-      // }
+      else {
+          axios.get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=${api_key}`)
+          .then((response) => {
+            setVideoDetails(response.data);
+          }).catch((err) => console.error(err));
+      }
       
     }, [videoID]);
+
+    console.log("VideoID", videoID);
 
   return (
         <>
