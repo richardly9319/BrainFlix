@@ -7,7 +7,7 @@ function SelectedVideo( { selectedVideo } ) {
 
     return (
         <>
-        <video controls className="selected-video" src={videos[selectedVideo]} poster={videos[selectedVideo].image} >
+        <video controls className="selected-video" src={videos[selectedVideo]} poster={videos[selectedVideo]?.image} >
         {/* <div className="selected-video__player">
             <img src={play} alt="" className="selected-video__player-play"/>
             <img src={scrub} alt="" className="selected-video__scrub" />

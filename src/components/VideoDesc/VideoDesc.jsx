@@ -8,9 +8,6 @@ import likesIcon from '../../assets/Icons/likes.svg';
 function VideoDesc() {
     let selected = 0;
     let video = videos[selected];
-    // console.log(videos);
-    // console.log(video);
-    // console.log("video details: ", videoDetails[selected].timestamp)
     return (
         <>
         <h1 className="video__title">{video.title}</h1>

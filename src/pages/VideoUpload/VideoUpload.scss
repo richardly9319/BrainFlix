@@ -1,0 +1,24 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+// h2 {
+//     color: $Silver;
+// }
+
+.videoUpload {
+
+    
+
+    &__thumbnail {
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+
+input {
+    background-image: none;
+    
+    &::placeholder {
+        color: $BrainFlix-Black;
+    }
+}

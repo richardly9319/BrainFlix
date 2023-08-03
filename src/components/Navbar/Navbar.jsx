@@ -13,10 +13,14 @@ function Navbar() {
             </Link>
             <div className="navbar__searchBar-and-Img-and-Button1">
                 <input className="navbar__searchBar" type="text" placeholder="Search"/>
+                <Link to='/VideoUpload'>
                 <Button visibility="1" icon={uploadIcon} text="Upload" />
+                </Link>
                 <img className="navbar__userImage" src={userImage} alt="user" />
             </div>
+            <Link to='/VideoUpload'>
             <Button visibility="2" icon={uploadIcon} text="upload"/>
+            </Link>
         </div>
     )
 }

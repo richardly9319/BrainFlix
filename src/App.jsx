@@ -10,16 +10,18 @@ function App() {
 
 
   return (
-    <div className="App">
+    
     <BrowserRouter>
+    <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage selectedVideo={0}/>}></Route>
-        <Route path="/HomePage" element={<HomePage selectedVideo={0}/>}></Route>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/HomePage/:videoID" element={<HomePage />}></Route>
         <Route path="/VideoUpload" element={<VideoUpload />}></Route>
       </Routes>
+      </div>
     </BrowserRouter>
-    </div>
+    
     
   );
 }

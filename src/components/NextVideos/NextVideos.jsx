@@ -21,18 +21,18 @@ function NextVideos( { videoDetails, selectedVideo, setSelectedVideo} ) {
 
 
 
-      console.log("selectedVideo: ", videoDetails[selectedVideo].id);
+      console.log("selectedVideo: ", videoDetails[selectedVideo]?.id);
 
-      let x = findVideoIndex(videoDetails, videoDetails[selectedVideo].id);
+      let x = findVideoIndex(videoDetails, videoDetails[selectedVideo]?.id);
       console.log('findVideo: ', x);
 
 
-        let selectedVideoID = videoDetails[selectedVideo].id;
+        let selectedVideoID = videoDetails[selectedVideo]?.id;
     
         console.log("videoDetails: ", videoDetails);
         console.log("selectedVideo: ", selectedVideo);
         let NextVideosList = videoDetails.filter((video) => {
-            if (video.id !== selectedVideoID) {
+            if (video?.id !== selectedVideoID) {
                 return video }}).map((video, index) => {
                     return (
                         <NextVideo video={video} index={index} setSelectedVideo={setSelectedVideo} findVideoIndex={findVideoIndex} videoDetails={videoDetails}/>
