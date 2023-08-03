@@ -31,13 +31,18 @@ function NextVideos( { videoDetails, selectedVideo, setSelectedVideo} ) {
     
         console.log("videoDetails: ", videoDetails);
         console.log("selectedVideo: ", selectedVideo);
-        let NextVideosList = videoDetails.filter((video) => {
+        let NextVideosList = [];
+        
+        if (videoDetails) {
+          NextVideosList = videoDetails?.filter((video) => {
             if (video?.id !== selectedVideoID) {
                 return video }}).map((video, index) => {
                     return (
                         <NextVideo video={video} index={index} setSelectedVideo={setSelectedVideo} videoDetails={videoDetails}/>
                     )
                 })
+        }
+        
                 
         
 
