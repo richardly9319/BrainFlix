@@ -1,10 +1,11 @@
-import videos from '../../assets/Data/videos.json';
+// import videos from '../../assets/Data/videos.json';
 import './SelectedVideo.scss';
 
-function SelectedVideo( { selectedVideo } ) {
+function SelectedVideo( { selectedVideo, VideoDetails } ) {
 
     console.log('selectedVideo!!: ', selectedVideo);
 
+    let videos = VideoDetails;
     return (
         <>
         <video controls className="selected-video" src={videos[selectedVideo]} poster={videos[selectedVideo]?.image} >

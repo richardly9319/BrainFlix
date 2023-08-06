@@ -4,13 +4,9 @@ import Button from '../Button/Button';
 import commentIcon from '../../assets/Icons/add_comment.svg';
 import CommentList from '../CommentList/CommentList';
 
-function Comments({ videoDetails, selectedVideo }) {
-    let comment_count = 3;
-    
+function Comments({ videoDetails, selectedVideoDetails }) {
+    let comment_count = selectedVideoDetails?.comments?.length;
 
-    let selectedVideoDetails = videoDetails[selectedVideo];
-
-    console.log("selectedVideoDetails: ", selectedVideoDetails);
 
     return (
 

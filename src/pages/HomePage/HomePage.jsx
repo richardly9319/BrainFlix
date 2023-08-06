@@ -26,7 +26,6 @@ function HomePage() {
     useEffect(() => {
       axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${api_key}`)
       .then((response) => {
-        console.log("VIDEO DETAILS", response.data);
         setVideoDetails(response.data);
       }
       ).catch((err) => console.error(err));
@@ -44,6 +43,7 @@ function HomePage() {
             
             return video.id == videoID;
           }))
+          
         // }).catch((err) => console.error(err));
       }
       else {
@@ -56,21 +56,34 @@ function HomePage() {
       
     }, [videoID]);
 
-    // useEffect(() => {
-    //   if (videoID) {
-    //     axios.get(`https://project-2-api.herokuapp.com/videos/${videoID}?api_key=${api_key}`)
-    //     .then((response) => {
-    //       console.log('VIDEOID: ', videoID);
-    // })
-    //   }, [videoID])
+    useEffect(() => {
+      if (videoID) {
+        axios.get(`https://project-2-api.herokuapp.com/videos/${videoID}?api_key=${api_key}`)
+        .then((response) => {
+          // console.log('SELECTED RESPONSE: ', response.data);
+          setSelectedVideoDetails(response.data);
+
+    })
+      }
+    
+      else {
+        
+        axios.get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=${api_key}`).then(
+          response => {
+            console.log("RESPONSE!!!!!", response.data);
+            setSelectedVideoDetails(response.data);
+          }
+        )
+        }
+    }, [videoID])
 
   return (
         <>
-      <SelectedVideo selectedVideo={selectedVideo} />
+      <SelectedVideo selectedVideo={selectedVideo} VideoDetails={VideoDetails} />
       <div className="Desc-Comments-NextVideos-Container">
       <div className="Desc-Comments-Container">
-      <VideoDesc />
-      <Comments videoDetails={VideoDetails} selectedVideo={selectedVideo} />
+      <VideoDesc videoDetails={VideoDetails} selectedVideo={selectedVideo} selectedVideoDetails={selectedVideoDetails} />
+      <Comments videoDetails={VideoDetails} selectedVideoDetails={selectedVideoDetails} />
       </div>
       <NextVideos videoDetails={VideoDetails} selectedVideo={selectedVideo} setSelectedVideo={setSelectedVideo}/>
       </div>
