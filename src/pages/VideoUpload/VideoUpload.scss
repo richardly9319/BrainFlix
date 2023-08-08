@@ -22,3 +22,25 @@ input {
         color: $BrainFlix-Black;
     }
 }
+
+label {
+    color: $Mercury;
+}
+
+.submit-button {
+    background-color: $BrainFlix-Blue;
+    color: white;
+    display: flex;
+    position: relative;
+    padding-left: 3.5rem;
+    height: 2.5rem;
+    margin-top: 16px;
+    border-radius: 5px;
+    background-image: url('../../assets/Icons/upload.svg');
+}
+
+.cancel-button {
+    background-color: white;
+    border: none;
+    color: $BrainFlix-Blue;
+}
