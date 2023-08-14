@@ -4,15 +4,10 @@ import likesIcon from '../../assets/Icons/likes.svg';
 
 
 function VideoDesc( { videoDetails, selectedVideo, selectedVideoDetails } ) {
-    // console.log("video Details in VIDEODESC", videoDetails);
-    // console.log("selectedVideo in VIDEODESC", selectedVideo);
-    // let selected = 0;
-    // if (selectedVideo != 0) {
+    
        let selected = selectedVideo;
-    // }
     let video = selectedVideoDetails;
 
-    console.log('selectedVIDEODETAILS VIDEODESC', video);
 
     return (
         <>

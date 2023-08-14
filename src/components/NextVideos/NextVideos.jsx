@@ -6,31 +6,15 @@ function NextVideos( { videoDetails, selectedVideo, setSelectedVideo} ) {
 
       
 
-      // const findVideoIndex = (videos, videoID) => {
-        
-      //   return (
-      //   videos?.findIndex((video) => {
-         
-      //     return video.id == videoID
-          
-      //   })
-      //   )
+      
 
 
-      // }
-
-
-
-      console.log("selectedVideo: ", videoDetails[selectedVideo]?.id);
-
-      // let x = findVideoIndex(videoDetails, videoDetails[selectedVideo]?.id);
-      // console.log('findVideo: ', x);
+    
 
 
         let selectedVideoID = videoDetails[selectedVideo]?.id;
     
-        console.log("videoDetails: ", videoDetails);
-        console.log("selectedVideo: ", selectedVideo);
+        
         let NextVideosList = [];
         
         if (videoDetails) {

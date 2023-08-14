@@ -5,14 +5,47 @@
 //     color: $Silver;
 // }
 
+* {
+    @include tablet {
+        margin: 0.5rem;
+    }
+}
+
 .videoUpload {
 
-    
+    // @include desktop {
+    //     display: flex;
+    // }
 
     &__thumbnail {
         width: 100%;
         border-radius: 8px;
+
+        @include desktop {
+            width: 40%;
+        }
     }
+
+    &__title {
+        @include tablet {
+            width: 90%;
+        }
+    }
+
+    &__desc {
+        @include tablet {
+            width: 90%;
+            height: 7rem;
+        }
+    }
+
+    &__input-fields {
+        @include desktop {
+
+        }
+    }
+
+    
 }
 
 input {

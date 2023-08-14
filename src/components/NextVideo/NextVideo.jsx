@@ -4,7 +4,6 @@ import './NextVideo.scss';
 
 function NextVideo( { video, index, setSelectedVideo, videoDetails} ) {
 
-    console.log("video in NextVideo: ", video);
   
 
     return (
